@@ -64,12 +64,12 @@ This app is essentially your all-in-one space to keep track of homework assignme
 **Flow Navigation** (Screen to Screen)
 
 - [ ] Stream
-* => Creation, for the creation of new tasks/exam date events that will appear in the stream screen
-* => Future version will likely involve navigation to a detailed view of courses, if [Courses Overview] tab navigation is added
+* Creation, for the creation of new tasks/exam date events that will appear in the stream screen
+* Future version will likely involve navigation to a detailed view of courses, if [Courses Overview] tab navigation is added
 - [ ] Creation
-* => Stream, returns back to this screen after creating a new task/exam date event
+* Stream, returns back to this screen after creating a new task/exam date event
 - [ ] Calendar
-* => None
+* None
 
 ## Wireframes
 
