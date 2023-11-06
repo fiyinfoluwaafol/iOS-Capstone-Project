@@ -28,39 +28,48 @@ This app is essentially your all-in-one space to keep track of homework assignme
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can add homework as new tasks
+* User can toggle completed/unfinished for homeworks/projects
+* User can add exams as events to keep track of exam dates
+* User can delete homework tasks
+
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can receive reminder notifications about outstanding tasks
+* User can change some settings of the app, such as frequency of notifications or color theme
+* User can view all tasks in a calendar view
+* User can view a list of their classes
+* User can view a detailed view of each course they are taking
 
 ### 2. Screen Archetypes
 
-- [ ] [list first screen here]
-* [list associated required story here]
-* ...
-list second screen here]
-* [list associated required story here]
-* ...
+- [ ] Stream
+* User can toggle completed/unfinished for homeworks/projects
+* User can delete homework tasks
+- [ ] Creation
+* User can add homework as new tasks
+* User can add exams as events to keep track of exam dates
+- [ ] Calendar **(Optional)**
+* User can view all tasks in a calendar view
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Homework Todo List
+* Exam Countdown
+* Calendar View
 
 **Flow Navigation** (Screen to Screen)
 
-- [ ] [list first screen here]
-* [list screen navigation here]
-* ...
-- [ ] [list second screen here]
-* [list screen navigation here]
-* ...
+- [ ] Stream
+* => Creation, for the creation of new tasks/exam date events that will appear in the stream screen
+* => Future version will likely involve navigation to a detailed view of courses, if [Courses Overview] tab navigation is added
+- [ ] Creation
+* => Stream, returns back to this screen after creating a new task/exam date event
+- [ ] Calendar
+* => None
 
 ## Wireframes
 
@@ -74,13 +83,3 @@ list second screen here]
 ## Schema 
 
 [This section will be completed in Unit 9]
-
-### Models
-
-[Add table of models]
-
-### Networking
-
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
