@@ -73,8 +73,7 @@ This app is essentially your all-in-one space to keep track of homework assignme
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://github.com/fiyinfoluwaafol/iOS-Capstone-Project/assets/112602670/7b1e61ec-5e94-433b-8587-05af1f32f8bb" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
