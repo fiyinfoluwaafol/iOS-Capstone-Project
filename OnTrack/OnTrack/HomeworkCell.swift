@@ -15,25 +15,44 @@ class HomeworkCell: UITableViewCell {
     
     @IBOutlet weak var dueDateLabel: UILabel!
     
+    @IBOutlet weak var completeButton: UIButton!
+    
+    
     var onCompleteButtonTapped: ((Homework) -> Void)?
     var homework: Homework!
     
     @IBAction func didTapCompleteButton(_ sender: UIButton) {
         homework.isComplete = !homework.isComplete
-        
-        onCompleteButtonTapped?(task)
+        update(with: homework)
+        onCompleteButtonTapped?(homework)
     }
     
+    func configure(with homework: Homework, onCompleteButtonTapped: ((Homework) -> Void)?) {
+        // 1.
+        self.homework = homework
+        // 2.
+        self.onCompleteButtonTapped = onCompleteButtonTapped
+        // 3.
+        update(with: homework)
+    }
     
+    private func update(with homework: Homework) {
+        courseLabel.text = homework.course
+        descriptionLabel.text = homework.description
+        // 3.
+        courseLabel.textColor = homework.isComplete ? .secondaryLabel : .label
+        // 4.
+        completeButton.isSelected = homework.isComplete
+        // 5.
+        completeButton.tintColor = homework.isComplete ? .systemBlue : .tertiaryLabel
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    override func setSelected(_ selected: Bool, animated: Bool) { }
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) { }
 
 }

@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="101" id="Qq5-qb-lGf" customClass="HomeworkCell" customModule="OnTrack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeworkCell" rowHeight="101" id="Qq5-qb-lGf" customClass="HomeworkCell" customModule="OnTrack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qq5-qb-lGf" id="AvX-wc-Lo7">
@@ -73,6 +73,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completeButton" destination="i3F-H6-wIR" id="Aza-15-gCM"/>
                                             <outlet property="courseLabel" destination="5wf-rQ-VFy" id="Hsq-Mh-WIe"/>
                                             <outlet property="descriptionLabel" destination="hmK-s0-d6f" id="aHn-k5-GOx"/>
                                             <outlet property="dueDateLabel" destination="GNt-HY-MXK" id="2dg-m9-dyN"/>
@@ -94,7 +95,8 @@
                     <navigationItem key="navigationItem" title="Homework" id="IYN-FW-I9O">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="O7U-8E-6oQ">
                             <connections>
-                                <segue destination="66s-xR-DMP" kind="presentation" id="Xd9-Ui-zr0"/>
+                                <action selector="didTapNewHomeworkButton:" destination="BYZ-38-t0r" id="5ZO-ze-rB1"/>
+                                <segue destination="66s-xR-DMP" kind="presentation" identifier="ComposeHomeworkSegue" id="Xd9-Ui-zr0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,7 +112,7 @@
         <!--New Homework-->
         <scene sceneID="qpl-FA-O6c">
             <objects>
-                <viewController id="kdi-H8-cCC" sceneMemberID="viewController">
+                <viewController id="kdi-H8-cCC" customClass="HomeworkComposeViewController" customModule="OnTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VWS-Pv-EdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,9 +155,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Homework" id="28z-AW-nPL">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="multiply" catalog="system" id="0xw-n1-6zH"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" id="cCn-Cf-pKq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="multiply" catalog="system" id="0xw-n1-6zH">
+                            <connections>
+                                <action selector="didTapCancelButton:" destination="kdi-H8-cCC" id="69Z-40-SQn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" id="Wnd-Or-3fL">
+                            <connections>
+                                <action selector="didTapDoneButton:" destination="kdi-H8-cCC" id="7An-Ls-ZXP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="Fu4-S4-GrM" id="Ih3-ls-fdE"/>
+                        <outlet property="descriptionField" destination="0iG-eL-lKH" id="9Eq-Zy-nn2"/>
+                        <outlet property="homeworkField" destination="uhE-1q-Hbn" id="RIX-Gj-d0l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knq-CY-RS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
