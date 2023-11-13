@@ -34,16 +34,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3F-H6-wIR">
-                                                    <rect key="frame" x="7" y="33" width="49.666666666666664" height="34.333333333333343"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3F-H6-wIR">
+                                                    <rect key="frame" x="25" y="33" width="82" height="27.333333333333329"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="circle" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                    </state>
+                                                    <state key="selected" image="circle.fill" catalog="system"/>
                                                     <connections>
                                                         <action selector="didTapCompleteButton:" destination="Qq5-qb-lGf" eventType="touchUpInside" id="Gq1-Fv-z4B"/>
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="GGS-sJ-8kP">
-                                                    <rect key="frame" x="64.666666666666657" y="33" width="300.33333333333337" height="49.666666666666657"/>
+                                                    <rect key="frame" x="107" y="33" width="258" height="49.666666666666657"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homework Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-s0-d6f">
                                                             <rect key="frame" x="0.0" y="0.0" width="174" height="20.333333333333332"/>
@@ -63,13 +66,12 @@
                                             <constraints>
                                                 <constraint firstItem="5wf-rQ-VFy" firstAttribute="leading" secondItem="AvX-wc-Lo7" secondAttribute="leading" constant="20" id="4Jc-0A-rgs"/>
                                                 <constraint firstItem="i3F-H6-wIR" firstAttribute="top" secondItem="5wf-rQ-VFy" secondAttribute="bottom" constant="5" id="4Nl-t3-Ufc"/>
+                                                <constraint firstItem="i3F-H6-wIR" firstAttribute="leading" secondItem="AvX-wc-Lo7" secondAttribute="leading" constant="25" id="5gM-H2-QVe"/>
+                                                <constraint firstItem="GGS-sJ-8kP" firstAttribute="leading" secondItem="i3F-H6-wIR" secondAttribute="trailing" id="BNP-eU-inD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="GGS-sJ-8kP" secondAttribute="bottom" constant="7.3300000000000001" id="DP1-lp-GPt"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GGS-sJ-8kP" secondAttribute="trailing" constant="8" id="N15-si-WZ3"/>
                                                 <constraint firstItem="GGS-sJ-8kP" firstAttribute="top" secondItem="5wf-rQ-VFy" secondAttribute="bottom" constant="5" id="feT-dr-5Gv"/>
-                                                <constraint firstItem="i3F-H6-wIR" firstAttribute="leading" secondItem="AvX-wc-Lo7" secondAttribute="leading" constant="7" id="h7n-YH-doY"/>
-                                                <constraint firstItem="GGS-sJ-8kP" firstAttribute="leading" secondItem="i3F-H6-wIR" secondAttribute="trailing" constant="8" id="i63-74-rbO"/>
                                                 <constraint firstItem="5wf-rQ-VFy" firstAttribute="top" secondItem="AvX-wc-Lo7" secondAttribute="top" constant="7.6699999999999999" id="kbr-ce-XUY"/>
-                                                <constraint firstItem="GGS-sJ-8kP" firstAttribute="leading" secondItem="i3F-H6-wIR" secondAttribute="trailing" constant="8" id="pK0-c5-RKN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -179,7 +181,7 @@
         <!--New Exam-->
         <scene sceneID="FoP-eE-lKh">
             <objects>
-                <viewController id="PkX-iN-qeE" sceneMemberID="viewController">
+                <viewController id="PkX-iN-qeE" customClass="ExamComposeViewController" customModule="OnTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0L1-cO-bWD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,9 +223,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Exam" id="7bo-W1-M6P">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="multiply" catalog="system" id="mw7-Cu-ceI"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" id="31P-H6-JW3"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="multiply" catalog="system" id="mw7-Cu-ceI">
+                            <connections>
+                                <action selector="didTapCancelButton:" destination="PkX-iN-qeE" id="TaB-uQ-npa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="checkmark" catalog="system" id="31P-H6-JW3">
+                            <connections>
+                                <action selector="didTapDoneButton:" destination="PkX-iN-qeE" id="jUD-ns-fWJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="courseTextField" destination="cKk-mf-slC" id="SGY-Yz-XEx"/>
+                        <outlet property="dateOfExam" destination="lzr-zt-2bA" id="MJp-jy-9Ec"/>
+                        <outlet property="examDescriptionTextField" destination="8f6-OG-EjC" id="a9o-A6-me7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4SS-jz-wEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -251,7 +266,7 @@
         <!--Exams-->
         <scene sceneID="jGq-Fu-JDD">
             <objects>
-                <viewController id="LFX-zT-feg" sceneMemberID="viewController">
+                <viewController id="LFX-zT-feg" customClass="ExamListViewController" customModule="OnTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8G9-oS-6wk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,13 +276,38 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="oBU-uL-Yx8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExamCell" rowHeight="79" id="oBU-uL-Yx8" customClass="ExamCell" customModule="OnTrack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBU-uL-Yx8" id="bA8-Ut-DhM">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course | Exam #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PD-L9-b3J">
+                                                    <rect key="frame" x="20" y="11" width="124" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Exam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fw-Qa-eTl">
+                                                    <rect key="frame" x="20" y="40" width="102" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Fw-Qa-eTl" firstAttribute="leading" secondItem="bA8-Ut-DhM" secondAttribute="leadingMargin" id="CyD-dw-9VL"/>
+                                                <constraint firstItem="0PD-L9-b3J" firstAttribute="top" secondItem="bA8-Ut-DhM" secondAttribute="topMargin" id="KFA-Zt-oVg"/>
+                                                <constraint firstItem="9Fw-Qa-eTl" firstAttribute="top" secondItem="0PD-L9-b3J" secondAttribute="bottom" constant="8" id="RlE-UM-8YO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9Fw-Qa-eTl" secondAttribute="bottom" constant="7" id="atF-xz-IK4"/>
+                                                <constraint firstItem="0PD-L9-b3J" firstAttribute="leading" secondItem="bA8-Ut-DhM" secondAttribute="leadingMargin" id="hNM-uf-9zq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="examDateLabel" destination="9Fw-Qa-eTl" id="dQM-IP-Izl"/>
+                                            <outlet property="examDetailsLabel" destination="0PD-L9-b3J" id="bRF-fE-182"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -285,10 +325,15 @@
                     <navigationItem key="navigationItem" title="Exams" id="6A5-3B-7o5">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Gj4-Ih-0jL">
                             <connections>
-                                <segue destination="6bi-kE-pKs" kind="presentation" id="4dJ-P1-7jq"/>
+                                <action selector="didTapNewExamButton:" destination="LFX-zT-feg" id="u6E-z3-z9Z"/>
+                                <segue destination="6bi-kE-pKs" kind="presentation" identifier="ComposeExamSegue" id="4dJ-P1-7jq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyStateLabel" destination="ybs-N3-6Ws" id="dAT-BX-ixf"/>
+                        <outlet property="tableView" destination="vLB-6K-rY6" id="q6Q-GH-PAw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTS-vr-sEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -465,6 +510,7 @@
         <image name="checklist.unchecked" catalog="system" width="128" height="107"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="pencil.and.list.clipboard" catalog="system" width="114" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>

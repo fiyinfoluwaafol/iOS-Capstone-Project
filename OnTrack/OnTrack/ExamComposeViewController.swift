@@ -1,69 +1,51 @@
 //
-//  HomeworkComposeViewController.swift
+//  ExamComposeViewController.swift
 //  OnTrack
 //
-//  Created by Fiyinfoluwa Afolayan on 11/7/23.
+//  Created by Fiyinfoluwa Afolayan on 11/11/23.
 //
 
 import UIKit
 
-class HomeworkComposeViewController: UIViewController {
-
-    @IBOutlet weak var homeworkField: UITextField!
+class ExamComposeViewController: UIViewController {
+    @IBOutlet weak var courseTextField: UITextField!
     
-    @IBOutlet weak var descriptionField: UITextField!
+    @IBOutlet weak var examDescriptionTextField: UITextField!
     
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
-    var homeworkToEdit: Homework?
-    var onComposeHomework: ((Homework) -> Void)? = nil
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        if let homework = homeworkToEdit {
-            homeworkField.text = homework.course
-            descriptionField.text = homework.description
-            datePicker.date = homework.dueDate
-
-            // 2.
-            self.title = "Edit Task"
-        }
-    }
+    @IBOutlet weak var dateOfExam: UIDatePicker!
     
     @IBAction func didTapDoneButton(_ sender: Any) {
-        guard let course = homeworkField.text,
+        guard let course = courseTextField.text,
               !course.isEmpty
         else {
             presentAlert(title: "Oops...", message: "Make sure to add a course name!")
             return
         }
-        guard let description = descriptionField.text,
+        guard let description = examDescriptionTextField.text,
               !description.isEmpty
         else {
             // i.
-            presentAlert(title: "Oops...", message: "Make sure to add a homework description!")
+            presentAlert(title: "Oops...", message: "Make sure to add an exam description!")
             // ii.
             return
         }
-        var homework: Homework
+        var exam: Exam
         // 3.
-        if let editHomework = homeworkToEdit {
+        if let editExam = examToEdit {
             // i.
-            homework = editHomework
+            exam = editExam
             // ii.
-            homework.course = course
-            homework.description = description
-            homework.dueDate = datePicker.date
+            exam.course = course
+            exam.description = description
+            exam.dateToBeTaken = dateOfExam.date
         } else {
             // 4.
-            homework = Homework(course: course,
+            exam = Exam(course: course,
                         description: description,
-                        dueDate: datePicker.date)
+                        dateToBeTaken: dateOfExam.date)
         }
         // 5.
-        onComposeHomework?(homework)
+        onComposeExam?(exam)
         // 6.
         dismiss(animated: true)
     }
@@ -72,6 +54,24 @@ class HomeworkComposeViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    
+    
+    var examToEdit: Exam?
+    var onComposeExam: ((Exam) -> Void)? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        if let exam = examToEdit {
+            courseTextField.text = exam.course
+            examDescriptionTextField.text = exam.description
+            dateOfExam.date = exam.dateToBeTaken
+
+            // 2.
+            self.title = "Edit Exam"
+        }
+    }
     
     private func presentAlert(title: String, message: String) {
         // 1.
@@ -86,8 +86,6 @@ class HomeworkComposeViewController: UIViewController {
         // 4.
         present(alertController, animated: true)
     }
-
-    
 
     /*
     // MARK: - Navigation

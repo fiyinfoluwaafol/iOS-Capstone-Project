@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class HomeworkCell: UITableViewCell {
 
@@ -37,8 +38,12 @@ class HomeworkCell: UITableViewCell {
     }
     
     private func update(with homework: Homework) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        
         courseLabel.text = homework.course
         descriptionLabel.text = homework.description
+        dueDateLabel.text = "Due by " + dateFormatter.string(from: homework.dueDate)
         // 3.
         courseLabel.textColor = homework.isComplete ? .secondaryLabel : .label
         // 4.
