@@ -28,26 +28,26 @@ This app is essentially your all-in-one space to keep track of homework assignme
 
 **Required Must-have Stories**
 
-* User can add homework as new tasks
-* User can toggle completed/unfinished for homeworks/projects
-* User can add exams as events to keep track of exam dates
-* User can delete homework tasks
+* [x] User can add homework as new tasks
+* [ ] User can toggle completed/unfinished for homeworks/projects
+* [x] User can add exams as events to keep track of exam dates
+* [x] User can delete homework tasks
 
 
 **Optional Nice-to-have Stories**
 
-* User can receive reminder notifications about outstanding tasks
-* User can change some settings of the app, such as frequency of notifications or color theme
-* User can view all tasks in a calendar view
-* User can view a list of their classes
-* User can view a detailed view of each course they are taking
+* [ ] User can receive reminder notifications about outstanding tasks
+* [ ] User can change some settings of the app, such as frequency of notifications or color theme
+* [ ] User can view all tasks in a calendar view
+* [ ] User can view a list of their classes
+* [ ] User can view a detailed view of each course they are taking
 
 ### 2. Screen Archetypes
 
-- [ ] Stream
+- [x] Stream
 * User can toggle completed/unfinished for homeworks/projects
 * User can delete homework tasks
-- [ ] Creation
+- [x] Creation
 * User can add homework as new tasks
 * User can add exams as events to keep track of exam dates
 - [ ] Calendar **(Optional)**
@@ -63,10 +63,10 @@ This app is essentially your all-in-one space to keep track of homework assignme
 
 **Flow Navigation** (Screen to Screen)
 
-- [ ] Stream
+- [x] Stream
 * Creation, for the creation of new tasks/exam date events that will appear in the stream screen
 * Future version will likely involve navigation to a detailed view of courses, if [Courses Overview] tab navigation is added
-- [ ] Creation
+- [x] Creation
 * Stream, returns back to this screen after creating a new task/exam date event
 - [ ] Calendar
 * None
@@ -75,10 +75,7 @@ This app is essentially your all-in-one space to keep track of homework assignme
 
 <img src="https://github.com/fiyinfoluwaafol/iOS-Capstone-Project/assets/112602670/7b1e61ec-5e94-433b-8587-05af1f32f8bb" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
-## Schema 
-
-[This section will be completed in Unit 9]
+## Progress Update
+Since the last status update, I have been able to complete the core features of the app, and was able to get started working on the optional calendar view. Ultimately, I also plan to
+implement notifications about upcoming exams and homework deadlines. I unfortunately ran into a slight issue with editing an already existing homework/exam, it created it as a new
+cell rather than just updating it in the table view.
