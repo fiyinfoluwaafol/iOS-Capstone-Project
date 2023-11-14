@@ -79,3 +79,8 @@ This app is essentially your all-in-one space to keep track of homework assignme
 Since the last status update, I have been able to complete the core features of the app, and was able to get started working on the optional calendar view. Ultimately, I also plan to
 implement notifications about upcoming exams and homework deadlines. I unfortunately ran into a slight issue with editing an already existing homework/exam, it created it as a new
 cell rather than just updating it in the table view.
+<div>
+    <a href="https://www.loom.com/share/d56a3b04b2b44405b914aea25c833e83">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/d56a3b04b2b44405b914aea25c833e83-with-play.gif">
+    </a>
+  </div>
