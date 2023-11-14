@@ -30,6 +30,7 @@ class ExamComposeViewController: UIViewController {
             return
         }
         var exam: Exam
+        var task: Task
         // 3.
         if let editExam = examToEdit {
             // i.
@@ -38,11 +39,25 @@ class ExamComposeViewController: UIViewController {
             exam.course = course
             exam.description = description
             exam.dateToBeTaken = dateOfExam.date
+            
         } else {
             // 4.
             exam = Exam(course: course,
                         description: description,
                         dateToBeTaken: dateOfExam.date)
+        }
+        
+        if let editTask = taskToEdit {
+            // i.
+            task = editTask
+            // ii.
+            task.course = course
+            task.description = description
+            task.dueDate = dateOfExam.date
+            
+        } else {
+            // 4.
+            task = Task(exam: exam)
         }
         // 5.
         onComposeExam?(exam)
@@ -58,6 +73,8 @@ class ExamComposeViewController: UIViewController {
     
     var examToEdit: Exam?
     var onComposeExam: ((Exam) -> Void)? = nil
+    
+    var taskToEdit: Task?
     
     override func viewDidLoad() {
         super.viewDidLoad()

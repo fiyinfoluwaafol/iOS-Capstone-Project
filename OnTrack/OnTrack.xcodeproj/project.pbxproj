@@ -21,6 +21,9 @@
 		15E2D23B2AFB2B4400ECA285 /* HomeworkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2D23A2AFB2B4400ECA285 /* HomeworkListViewController.swift */; };
 		15E2D23D2AFB2D1100ECA285 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2D23C2AFB2D1100ECA285 /* Homework.swift */; };
 		15E2D23F2AFB498B00ECA285 /* HomeworkComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2D23E2AFB498B00ECA285 /* HomeworkComposeViewController.swift */; };
+		15F5C9672B024A7000623BC3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F5C9662B024A7000623BC3 /* CalendarViewController.swift */; };
+		15F5C9692B02535D00623BC3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F5C9682B02535D00623BC3 /* Task.swift */; };
+		15F5C96B2B0257D200623BC3 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F5C96A2B0257D200623BC3 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		15E2D23A2AFB2B4400ECA285 /* HomeworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkListViewController.swift; sourceTree = "<group>"; };
 		15E2D23C2AFB2D1100ECA285 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
 		15E2D23E2AFB498B00ECA285 /* HomeworkComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkComposeViewController.swift; sourceTree = "<group>"; };
+		15F5C9662B024A7000623BC3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		15F5C9682B02535D00623BC3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		15F5C96A2B0257D200623BC3 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				1507F5A82AF99686006B2FCD /* SceneDelegate.swift */,
 				1507F5AA2AF99686006B2FCD /* ViewController.swift */,
 				1507F5AC2AF99686006B2FCD /* Main.storyboard */,
+				15F5C9682B02535D00623BC3 /* Task.swift */,
+				15F5C9662B024A7000623BC3 /* CalendarViewController.swift */,
+				15F5C96A2B0257D200623BC3 /* TaskCell.swift */,
 				157001B62AFFC96100C66F35 /* Exam.swift */,
 				15E2D23A2AFB2B4400ECA285 /* HomeworkListViewController.swift */,
 				15E2D23E2AFB498B00ECA285 /* HomeworkComposeViewController.swift */,
@@ -162,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F5C9672B024A7000623BC3 /* CalendarViewController.swift in Sources */,
 				157001B72AFFC96100C66F35 /* Exam.swift in Sources */,
 				1507F5AB2AF99686006B2FCD /* ViewController.swift in Sources */,
 				15E2D23B2AFB2B4400ECA285 /* HomeworkListViewController.swift in Sources */,
@@ -169,6 +179,8 @@
 				15E2D23F2AFB498B00ECA285 /* HomeworkComposeViewController.swift in Sources */,
 				157001B52AFFC8FF00C66F35 /* ExamCell.swift in Sources */,
 				157001B32AFFC8E900C66F35 /* ExamComposeViewController.swift in Sources */,
+				15F5C96B2B0257D200623BC3 /* TaskCell.swift in Sources */,
+				15F5C9692B02535D00623BC3 /* Task.swift in Sources */,
 				1507F5A72AF99686006B2FCD /* AppDelegate.swift in Sources */,
 				157001B12AFFC8D500C66F35 /* ExamListViewController.swift in Sources */,
 				1507F5A92AF99686006B2FCD /* SceneDelegate.swift in Sources */,

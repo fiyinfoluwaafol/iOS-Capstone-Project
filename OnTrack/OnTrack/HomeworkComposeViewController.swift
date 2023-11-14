@@ -16,6 +16,7 @@ class HomeworkComposeViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var homeworkToEdit: Homework?
+    var taskToEdit: Task?
     var onComposeHomework: ((Homework) -> Void)? = nil
     
     override func viewDidLoad() {
@@ -48,6 +49,7 @@ class HomeworkComposeViewController: UIViewController {
             return
         }
         var homework: Homework
+        var task: Task
         // 3.
         if let editHomework = homeworkToEdit {
             // i.
@@ -61,6 +63,19 @@ class HomeworkComposeViewController: UIViewController {
             homework = Homework(course: course,
                         description: description,
                         dueDate: datePicker.date)
+        }
+        
+        if let editTask = taskToEdit {
+            // i.
+            task = editTask
+            // ii.
+            task.course = course
+            task.description = description
+            task.dueDate = datePicker.date
+            
+        } else {
+            // 4.
+            task = Task(hw: homework)
         }
         // 5.
         onComposeHomework?(homework)
