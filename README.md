@@ -84,3 +84,13 @@ cell rather than just updating it in the table view.
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/d56a3b04b2b44405b914aea25c833e83-with-play.gif">
     </a>
   </div>
+
+#Final Update
+Since the last update, nothing was needed to be added because the app was already completed, as I was trying to have a finished version for Demo Day. I did choose to remove the 
+Calendar page because it was an optional feature but having an incomplete feature in the app makes it look a bit unfinished. Kindly find below the updated recording without the 
+calendar tab
+<div>
+    <a href="https://www.loom.com/share/1af5ef3bcd174dcab51c8b33988c9459">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/1af5ef3bcd174dcab51c8b33988c9459-with-play.gif">
+    </a>
+  </div>
